@@ -64,7 +64,7 @@ class Carro:
             print("Este", self.modelo,"ja esta desligado.")
 
     def frear(self, quantidade):
-        if self.ligado == False:
+        if not self.ligado:
             print(self.modelo, "desligado, impossivel frear.")
         else:
             if quantidade > self.velocidade_atual:
@@ -102,3 +102,4 @@ print(carro1.velocidade_atual)
 carro1.frear(40)
 print(carro1.velocidade_atual)
 carro1.desligar()
+carro1.frear(30)
