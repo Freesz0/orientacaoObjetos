@@ -28,9 +28,7 @@ class ContaBancaria:
 
     def sacar(self, quantidade):
         if self.saldo < quantidade:
-            print("Tentativa de saque de R$",
-                  quantidade,
-                  "falhou : SALDO INSUFICIENTE.")
+            print("Tentativa de saque de R$",quantidade,"falhou : SALDO INSUFICIENTE.")
         else:
             self.saldo -= quantidade
             print("Saque de R$", quantidade,"realizado com sucesso na conta",self.numero_conta,

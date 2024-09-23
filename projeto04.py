@@ -47,7 +47,6 @@ class Produto:
         print(self.nome,"|","R$",self.preco,"|",self.quantidade_estoque,"unidades","|",self.categoria)
 
 
-
 produto1 = Produto()
 produto1.nome = "Pão Doce"
 produto1.preco = 9.0
@@ -69,5 +68,3 @@ produto2.exibir_dados()
 produto2.aplicar_desconto(15)
 produto2.remover_estoque(70)
 produto2.exibir_dados()
-
-
