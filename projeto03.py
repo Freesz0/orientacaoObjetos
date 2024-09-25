@@ -1,4 +1,5 @@
 class Pessoa:
+
     nome = ""
     idade = 0
     altura = 0

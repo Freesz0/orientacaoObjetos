@@ -1,4 +1,5 @@
 class ContaBancaria:
+
     titular = ""
     numero_conta = ""
     saldo = 0

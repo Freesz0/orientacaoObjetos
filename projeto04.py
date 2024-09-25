@@ -1,4 +1,5 @@
 class Produto:
+
     nome = ""
     preco = 0.0
     quantidade_estoque = ""

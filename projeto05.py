@@ -1,6 +1,3 @@
-from array import array
-
-
 class Funcionario:
 
     nome = ""
