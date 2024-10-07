@@ -43,24 +43,22 @@ class Funcionario:
     def exibir_dados(self):
         print("|",self.nome,"|",self.cargo,"|",self.salario,"|",self.departamento,"|")
 
+funcionario0 = Funcionario()
+funcionario0.nome = "Michael"
+funcionario0.cargo = "Gerente Regional"
+funcionario0.salario = 15000
+funcionario0.departamento = "Administracao"
+funcionario0.exibir_dados()
+funcionario0.mudar_departamento("Administracao")
+funcionario0.exibir_dados()
+print()
 funcionario1 = Funcionario()
-funcionario1.nome = "Michael"
-funcionario1.cargo = "Gerente Regional"
-funcionario1.salario = 15000
-funcionario1.departamento = "Administracao"
+funcionario1.nome = "Jim"
+funcionario1.cargo = "Vendedor"
+funcionario1.salario = 4000
+funcionario1.departamento = "Vendas"
 funcionario1.exibir_dados()
 funcionario1.mudar_departamento("Administracao")
+funcionario1.mudar_cargo("Gestor de Vendas")
+funcionario1.receber_aumento(20)
 funcionario1.exibir_dados()
-
-funcionario2 = Funcionario()
-funcionario2.nome = "Jim"
-funcionario2.cargo = "Vendedor"
-funcionario2.salario = 4000
-funcionario2.departamento = "Vendas"
-funcionario2.exibir_dados()
-funcionario2.mudar_departamento("Administracao")
-funcionario2.mudar_cargo("Gestor de Vendas")
-funcionario2.receber_aumento(20)
-funcionario2.exibir_dados()
-
-
