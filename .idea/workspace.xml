@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa00e567-911b-4c0f-8f17-87736f886955" name="Changes" comment="03 10 2024">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto01.py" beforeDir="false" afterPath="$PROJECT_DIR$/projeto01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto02.py" beforeDir="false" afterPath="$PROJECT_DIR$/projeto02.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto05.py" beforeDir="false" afterPath="$PROJECT_DIR$/projeto05.py" afterDir="false" />
-    </list>
+    <list default="true" id="aa00e567-911b-4c0f-8f17-87736f886955" name="Changes" comment="03 10 2024" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -308,15 +303,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727993829681</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="03 10 2024">
+      <option name="closed" value="true" />
+      <created>1728339685362</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728339685362</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="02 09 24 init" />
     <MESSAGE value="23 09 24 init" />
     <MESSAGE value="25 09 24" />
-    <MESSAGE value="03 10 2024" />
     <MESSAGE value="03 10 2024&#10;vel. atual antes 1ª acel. Jeska" />
-    <option name="LAST_COMMIT_MESSAGE" value="03 10 2024&#10;vel. atual antes 1ª acel. Jeska" />
+    <MESSAGE value="03 10 2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="03 10 2024" />
   </component>
 </project>

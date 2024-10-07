@@ -125,7 +125,7 @@ print(carro0.get_velocidade_atual())
 carro0.frear(30)
 print(carro0.get_velocidade_atual())
 carro0.desligar()
-print()
+
 
 marca1 = Marca()
 marca1.set_nome("Koenigsegg")
