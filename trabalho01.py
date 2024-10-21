@@ -66,9 +66,12 @@ class Funcionario:
     def __init__(self, escolaridade, pais, filial):
         self.nome = ""
         self.empresa = None
+        self.escolaridade = None
         self.set_escolaridade(escolaridade)
+        self.pais = None
         self.set_pais(pais)
-        self.set_filial(filial)
+        self.filial = None
+        self.set_filial = filial
 
     def get_escolaridade(self):
         return self.escolaridade
@@ -95,10 +98,10 @@ class Funcionario:
         return self.pais.get_sede()
 
     def get_filial(self):
-        return self.get_filial()
+        return self.filial()
 
     def set_filial(self, filial):
-        self.get_filial = filial
+        self.filial = filial
 
     def get_nome(self):
         return self.nome
@@ -112,6 +115,7 @@ class Funcionario:
 class Departamento:
 
     def __init__(self, chefe):
+        self.chefe = None
         self.departamento = ""
         self.set_chefe(chefe)
 
@@ -131,13 +135,15 @@ class Departamento:
         if self.chefe is None:
             print(f"Sem chefe de departamento definido para: {self.get_departamento()}")
         else:
-            return self.get_chefe
+            return self.chefe.get_nome()
 
 class Empresa:
 
     def __init__(self, diretor, filial):
         self.nome = ""
+        self.diretor = None
         self.set_diretor = diretor
+        self.get_filial = None
         self.filial = filial
 
     def get_nome(self):
@@ -207,5 +213,5 @@ grupo1.set_presidente(funcionario1)
 print(f"Escolaridade do presidente do grupo: {grupo1.get_nome_escolaridade_presidente()}")
 print(f"País de alocação do funcionário: {funcionario1.get_alocacao_pais()}")
 print(f"Estado de alocação da filial coordenada pelo funcionário: {filial1.get_nome_estado()}")
-print(f"Escolaridade do chefe do departamento de {departamento1.get_departamento()}: {funcionario2.get_nome_escolaridade()}")
+print(f"Escolaridade de {departamento1.get_nome_chefe()}, chefe do departamento de {departamento1.get_departamento()}: {funcionario2.get_nome_escolaridade()}")
 print(f"Nome do diretor da empresa {empresa1.get_nome()}, da filial de {empresa1.get_nome_filial()}: {funcionario3.get_nome_funcionario()}")
