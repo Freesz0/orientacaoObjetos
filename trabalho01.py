@@ -100,6 +100,15 @@ class Funcionario:
     def set_filial(self, filial):
         self.get_filial = filial
 
+    def get_nome(self):
+        return self.nome
+
+    def set_nome(self, nome):
+        self.nome = nome
+
+    def get_nome_funcionario(self):
+        return self.get_nome()
+
 class Departamento:
 
     def __init__(self, chefe):
@@ -128,8 +137,8 @@ class Empresa:
 
     def __init__(self, diretor, filial):
         self.nome = ""
-        self.set_diretor(diretor)
-        self.set_filial(filial)
+        self.set_diretor = diretor
+        self.filial = filial
 
     def get_nome(self):
         return self.nome
@@ -150,11 +159,7 @@ class Empresa:
         self.get_filial = filial
 
     def get_nome_filial(self):
-        if self.set_filial is None:
-            print("Empresa sem filial definida")
-            exit()
-        else:
-            return self.get_filial
+        return self.filial.get_nome()
 
 
 class Escolaridade:
@@ -188,6 +193,7 @@ funcionario1.nome = "João"
 funcionario2 = Funcionario(escolaridade2, pais1, filial1)
 funcionario2.nome = "Maria"
 funcionario3 = Funcionario(escolaridade1, pais1, filial1)
+funcionario3.nome = "José"
 
 departamento1 = Departamento(funcionario2)
 departamento1.set_departamento("Gestão de Riscos")
@@ -202,4 +208,4 @@ print(f"Escolaridade do presidente do grupo: {grupo1.get_nome_escolaridade_presi
 print(f"País de alocação do funcionário: {funcionario1.get_alocacao_pais()}")
 print(f"Estado de alocação da filial coordenada pelo funcionário: {filial1.get_nome_estado()}")
 print(f"Escolaridade do chefe do departamento de {departamento1.get_departamento()}: {funcionario2.get_nome_escolaridade()}")
-print(f"Nome do diretor da empresa {empresa1.get_nome()}, da filial de {empresa1.get_nome_filial()}")
+print(f"Nome do diretor da empresa {empresa1.get_nome()}, da filial de {empresa1.get_nome_filial()}: {funcionario3.get_nome_funcionario()}")
