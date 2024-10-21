@@ -36,14 +36,13 @@ class Filial:
         return self.estado
 
     def set_estado(self, estado):
-        self.estado = estado
-
-    def get_nome_estado(self):
         if self.estado is None:
             print("Filial sem estado definido")
         else:
-            return self.estado.get_nome()
+            self.estado = estado
 
+    def get_nome_estado(self):
+            return self.estado.get_nome()
 
 class Grupo:
 
@@ -65,6 +64,8 @@ class Grupo:
 class Funcionario:
 
     def __init__(self, escolaridade, pais, filial):
+        self.nome = ""
+        self.empresa = None
         self.set_escolaridade(escolaridade)
         self.set_pais(pais)
         self.set_filial(filial)
@@ -99,6 +100,48 @@ class Funcionario:
     def set_filial(self, filial):
         self.get_filial = filial
 
+class Departamento:
+
+    def __init__(self, chefe):
+        self.departamento = ""
+        self.set_chefe(chefe)
+
+    def get_departamento(self):
+        return self.departamento
+
+    def set_departamento(self, departamento):
+        self.departamento = departamento
+
+    def get_chefe(self):
+        return self.chefe
+
+    def set_chefe(self, chefe):
+        self.chefe = chefe
+
+    def get_nome_chefe(self):
+        if self.chefe is None:
+            print(f"Sem chefe de departamento definido para: {self.get_departamento()}")
+        else:
+            return self.get_chefe
+
+class Empresa:
+
+    def __init__(self, diretor):
+        self.nome = ""
+        self.set_diretor = diretor
+
+    def get_nome(self):
+        return self.nome
+
+    def set_nome(self, nome):
+        self.nome = nome
+
+    def get_diretor(self):
+        return self.set_diretor
+
+    def set_diretor(self, diretor):
+        self.diretor = diretor
+
 class Escolaridade:
 
     def __init__(self):
@@ -112,7 +155,9 @@ class Escolaridade:
 
 
 escolaridade1 = Escolaridade()
-escolaridade1.set_nome("Graduacao")
+escolaridade1.set_nome("Mestrado")
+escolaridade2 = Escolaridade()
+escolaridade2.set_nome("Especialização")
 
 pais1 = Pais()
 pais1.set_sede("Brasil")
@@ -124,11 +169,18 @@ filial1 = Filial(estado1)
 filial1.set_nome("VASP")
 
 funcionario1 = Funcionario(escolaridade1, pais1, filial1)
+funcionario1.nome = "João"
+funcionario2 = Funcionario(escolaridade2, pais1, filial1)
+funcionario2.nome = "Maria"
+funcionario3 = Funcionario(escolaridade1, pais1, filial1)
+
+departamento1 = Departamento(funcionario2)
+departamento1.set_departamento("Gestão de Riscos")
 
 grupo1 = Grupo()
 grupo1.set_presidente(funcionario1)
 
 print(f"Escolaridade do presidente do grupo: {grupo1.get_nome_escolaridade_presidente()}")
 print(f"País de alocação do funcionário: {funcionario1.get_alocacao_pais()}")
-print(filial1.get_nome_estado())
-#print(f"Estado de alocação da filial coordenada pelo funcionário: {filial1.get_nome_estado()}")
+print(f"Estado de alocação da filial coordenada pelo funcionário: {filial1.get_nome_estado()}")
+print(f"Escolaridade do chefe do departamento de {departamento1.get_departamento()}: {funcionario2.get_nome_escolaridade()}")
